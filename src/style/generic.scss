@@ -1,3 +1,4 @@
+// -------- RESET --------- //
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +15,7 @@
     
 }
 
-.container {
-    padding: 0px 150px;
-}
+// -------- GENERAL --------- //
 
 a {
     text-decoration: none;
@@ -24,4 +23,16 @@ a {
 
 li {
     list-style: none;
+}
+
+// -------- LAYOUT --------- //
+
+.container {
+    padding: 20px 150px;
+}
+
+// -------- UTILITY --------- //
+
+.ms-pdg-20 {
+    padding-bottom: 20px;
 }
