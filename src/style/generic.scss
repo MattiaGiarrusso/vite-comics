@@ -2,4 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    body {
+        // Oswald font family
+        // <weight>: Use a value from 200 to 700
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+    
+}
+
+.container {
+    padding: 0px 150px;
+}
+
+a {
+    text-decoration: none;
 }

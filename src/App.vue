@@ -10,8 +10,14 @@
 
 <template>
   <AppHeader></AppHeader>
+
+  <main>
+    
+  </main>
 </template>
 
 <style lang="scss">
+
   @use './style/generic';
+
 </style>
