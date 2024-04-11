@@ -3,6 +3,7 @@
   import AppSectionContent from './components/AppSectionContent.vue';
   import AppSectionBlue from './components/AppSectionBlue.vue';
   import AppSectionLinks from './components/AppSectionLinks.vue';
+  import AppFooter from './components/AppFooter.vue';
 
   export default {
     components: {
@@ -10,6 +11,7 @@
       AppSectionContent,
       AppSectionBlue,
       AppSectionLinks,
+      AppFooter
     }
   }
 </script>
@@ -21,11 +23,13 @@
     <AppSectionContent></AppSectionContent>
     <AppSectionBlue></AppSectionBlue>
     <AppSectionLinks></AppSectionLinks>
+    <AppFooter></AppFooter>
   </main>
 </template>
 
 <style lang="scss">
 
   @use './style/generic';
+  @use './style/partials/variables' as *;
 
 </style>
