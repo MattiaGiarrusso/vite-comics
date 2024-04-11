@@ -45,6 +45,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
+    padding-bottom: 20px;
 
     nav {
 
@@ -52,13 +53,9 @@ header {
             display: flex;
             gap: 15px;
     
-            li {
-                list-style: none;
-            }
-    
             a {
                 color:  $color-primary;
-                padding: 40px 0;
+                padding: 58px 0;
                 
                 &.active {
                     color: $color-secondary;
