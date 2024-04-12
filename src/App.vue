@@ -1,30 +1,32 @@
 <script>
   import AppHeader from './components/AppHeader.vue';
-  import AppSectionContent from './components/AppSectionContent.vue';
-  import AppSectionBlue from './components/AppSectionBlue.vue';
-  import AppSectionLinks from './components/AppSectionLinks.vue';
+  import AppMainContent from './components/AppMainContent.vue';
+  import AppMainBlue from './components/AppMainBlue.vue';
   import AppFooter from './components/AppFooter.vue';
 
   export default {
     components: {
       AppHeader,
-      AppSectionContent,
-      AppSectionBlue,
-      AppSectionLinks,
-      AppFooter
+      AppMainContent,
+      AppMainBlue,
+      AppFooter,
     }
   }
 </script>
 
 <template>
-  <AppHeader></AppHeader>
+  <header>
+    <AppHeader></AppHeader>
+  </header>
 
   <main>
-    <AppSectionContent></AppSectionContent>
-    <AppSectionBlue></AppSectionBlue>
-    <AppSectionLinks></AppSectionLinks>
-    <AppFooter></AppFooter>
+    <AppMainContent></AppMainContent>
+    <AppMainBlue></AppMainBlue>
   </main>
+
+  <footer>
+    <AppFooter></AppFooter>
+  </footer>
 </template>
 
 <style lang="scss">

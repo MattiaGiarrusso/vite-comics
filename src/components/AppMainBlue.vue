@@ -1,6 +1,6 @@
 <script>
   export default {
-    name: 'AppSectionBlue'
+    name: 'AppMainBlue'
   }
 </script>
 

@@ -1,6 +1,6 @@
 <script>
   export default {
-    name: 'AppSectionContent'
+    name: 'AppMainContent'
   }
 </script>
 
