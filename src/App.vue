@@ -10,14 +10,17 @@
       AppMainContent,
       AppMainBlue,
       AppFooter,
+    },
+    data() {
+      return {
+       
+        }
+      }
     }
-  }
 </script>
 
 <template>
-  <header>
-    <AppHeader></AppHeader>
-  </header>
+  <AppHeader></AppHeader>
 
   <main>
     <AppMainContent></AppMainContent>
@@ -32,6 +35,5 @@
 <style lang="scss">
 
   @use './style/generic';
-  @use './style/partials/variables' as *;
 
 </style>

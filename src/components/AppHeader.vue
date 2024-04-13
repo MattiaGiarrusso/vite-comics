@@ -1,6 +1,53 @@
 <script>
   export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    data () {
+        return {
+            links: [
+                {
+                    text: 'CHARACTERS',
+                },
+                {
+                    text: 'COMICS',
+                },
+                {
+                    text: 'MOVIES',
+                },
+                {
+                    text: 'TV',
+
+                },
+                {
+                    text: 'GAMES',
+
+                },
+                {
+                    text: 'COLLECTIBLES',
+                },
+                {
+                    text: 'VIDEOS',
+
+                },
+                {
+                    text: 'FANS',
+
+                },
+                {
+                    text: 'NEWS',
+
+                },
+                {
+                    text: 'SHOP',
+                },
+            ],
+            activeLink: 0,
+        }
+    },
+    methods: {
+        ActiveIndexLink(index) {
+        this.activeLink = index;
+      },
+    }
   }
 </script>
 
@@ -13,23 +60,8 @@
 
         <nav>
             <ul>
-                <li>
-                    <a href="">link</a>
-                </li>
-                <li>
-                    <a href="" class="active">link</a>
-                </li>
-                <li>
-                    <a href="">link</a>
-                </li>
-                <li>
-                    <a href="">link</a>
-                </li>
-                <li>
-                    <a href="">link</a>
-                </li>
-                <li>
-                    <a href="">link</a>
+                <li v-for="(link, index) in links" :class="{'active': index == activeLink}" @click="ActiveIndexLink(index)">
+                    <a href="">{{ link.text }}</a>
                 </li>
             </ul>
         </nav>
@@ -44,22 +76,39 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    div {
+        height: 100%;
+
+        img {
+            height: 100%;;
+        }
+    }
 
     nav {
 
         ul {
             display: flex;
-            gap: 15px;
-    
-            a {
-                color:  $color-primary;
-                padding: 58px 0;
+            gap: 18px;
+            
+            li {
+                font-size: 12px;
+                color: $color-primary;
+                padding: 29px 0;
                 
                 &.active {
                     color: $color-secondary;
                     border-bottom: 4px solid $color-secondary;
                 }
+
+                a {
+                    color: inherit;
+                }
             }
+    
         }
 
     }

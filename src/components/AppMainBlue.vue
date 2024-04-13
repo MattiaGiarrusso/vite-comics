@@ -1,31 +1,42 @@
 <script>
   export default {
-    name: 'AppMainBlue'
+    name: 'AppMainBlue',
+    data () {
+        return {
+            links: [
+                {
+                    icon: 'buy-comics-digital-comics.png',
+                    text: 'DIGITAL COMICS'
+                },
+                {
+                    icon: 'buy-comics-merchandise.png',
+                    text: 'DC MERCHANDISE'
+                },
+                {
+                    icon: 'buy-comics-shop-locator.png',
+                    text: 'COMIC SHOP LOCATOR'
+                },
+                {
+                    icon: 'buy-comics-subscriptions.png',
+                    text: 'SUBSCRIPTIONS'
+                },                
+            ]
+        }
+    },
+    methods: {
+        getImageUrl(name) {
+            return new URL('../assets/img/' + name, import.meta.url).href;
+        }
+    }
   }
 </script>
 
 <template>
     <section class="container">
-        <ul>
-            <li>
-                <img src="" alt="">
-                <a href="">link</a>
-            </li>
-            <li>
-                <img src="" alt="">
-                <a href="">link</a>
-            </li>
-            <li>
-                <img src="" alt="">
-                <a href="">link</a>
-            </li>
-            <li>
-                <img src="" alt="">
-                <a href="">link</a>
-            </li>
-            <li>
-                <img src="" alt="">
-                <a href="">link</a>
+        <ul class="ms-gap-40">
+            <li v-for="link in links">
+                <img :src="getImageUrl(link.icon)" class="ms-pdg-right-10" :alt="link.text">
+                <a href="">{{ link.text }}</a>
             </li>
         </ul>
     </section>
@@ -36,7 +47,7 @@
 @use '../style/partials/variables' as *;
 
 section {
-    height: 140px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,14 +56,22 @@ section {
 
     ul {
         display: flex;
-        gap: 20px;
 
-        a {
-            color: white;
-            font-weight: 300;
-        }
-    }
+        li {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 40px;
+            }
     
+            a {
+                color: white;
+                font-weight: 300;
+            }
+        }
+
+    }    
     
 }
 
