@@ -1,9 +1,39 @@
 <script>
-  export default {
-    name: 'AppFooter'
-  }
-</script>
+import AppLinksFooter from './AppLinksFooter.vue';
 
+  export default {
+    name: 'AppFooter',
+    components: {
+      AppLinksFooter
+    },
+    data () {
+        return {
+            navSections: [
+                {
+                    title: 'Dc Comics',
+                    link: ['Characters','Comics','Movies','TV','Games','Videos','News',]
+                },
+
+                {
+                    title: 'Shop',
+                    link: ['Shop DC','Shop DC Collectibles',]
+                },
+
+                {
+                    title: 'DC',
+                    link: ['Terms of Use','Privacy policy (New)','Ad Choices','Advertising','Jobs','Subscriptions','Talent Workshops','CPSC Certificates','Ratings','Shop Help','Contact Us',]
+                },
+
+                {
+                    title: 'Sites',
+                    link: ['DC','MAD Magazines','DC Kids','DC Universe','DC Power Visa',]
+                },
+            ]
+        }
+      }
+  }
+
+</script>
 
 
 <template>
@@ -11,114 +41,11 @@
   <section id="footer-link" class="container">
 
     <nav>
-      <div class="nav-item">
-
-        <h4>DC COMICS</h4>
-          <ul class="ms-pdg-20">
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-          </ul>
-          
-          <h4>SHOP</h4>
-          <ul>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-          </ul>
-          
-        </div>
-
-        <div class="nav-item">
-
-          <h4>DC</h4>
-          <ul>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-            <li>
-              <a href="">Link</a>
-            </li>
-          </ul>
-
-        </div>
-
-        <div class="nav-item">
-
-          <h4>SITES</h4>
-            <ul>
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-              <li>
-                <a href="">Link</a>
-              </li>
-            </ul>
-
-        </div>
-
+      <AppLinksFooter v-for="navSection in navSections" :title="navSection.title" :link="navSection.link"></AppLinksFooter>
     </nav>
 
 
     <div class="img-container">
-
     </div>
     
   </section>
@@ -180,7 +107,6 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
-      padding: 0;
     }
     
     nav {
@@ -195,13 +121,12 @@
             color: lightgray;
           }
 
-    }
-       
+    }      
   
   }
 
   #footer-bottom {
-    height: 100px;
+    height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -220,6 +145,7 @@
             padding: 8px 12px;
             color: white;
             font-weight: 700;
+            font-family: inherit;
             cursor: pointer;
 
             &:hover {
@@ -227,10 +153,13 @@
                 transition: 0.2s; 
             }
         }
+
+        .footer-left {
+
+          &.social-icon {
+            height: 0px;
+          }
+        }
   }
-
-
-
-  
 
 </style>
