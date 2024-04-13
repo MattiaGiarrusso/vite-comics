@@ -179,6 +179,7 @@ section {
           font-family: inherit;
 
           &:hover {
+            transition: 0.4s;
             background-color: white;
             color: $color-secondary;
           }

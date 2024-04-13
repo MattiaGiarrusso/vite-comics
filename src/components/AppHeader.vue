@@ -40,7 +40,7 @@
                     text: 'SHOP',
                 },
             ],
-            activeLink: 0,
+            activeLink: null,
         }
     },
     methods: {
@@ -60,8 +60,8 @@
 
         <nav>
             <ul>
-                <li v-for="(link, index) in links" :class="{'active': index == activeLink}" @click="ActiveIndexLink(index)">
-                    <a href="">{{ link.text }}</a>
+                <li v-for="link in links" @click="ActiveIndexLink(link)">
+                    <a :class="{'active': link == activeLink}"  href="#">{{ link.text }}</a>
                 </li>
             </ul>
         </nav>
@@ -94,24 +94,21 @@ header {
             display: flex;
             gap: 18px;
             
-            li {
+            a {
                 font-size: 12px;
                 color: $color-primary;
-                padding: 29px 0;
-                
+                padding: 26px 0;
+
                 &.active {
                     color: $color-secondary;
                     border-bottom: 4px solid $color-secondary;
                 }
-
-                a {
-                    color: inherit;
-                }
             }
-    
-        }
 
+        }
+    
     }
 
 }
+
 </style>

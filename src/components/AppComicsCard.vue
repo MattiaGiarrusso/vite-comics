@@ -30,7 +30,10 @@
     display: flex;
     flex-direction: column;
     padding: 10px 10px;
-
+    &:hover {
+      opacity: 0.6;
+    }
+    
     a {
       color: white;
       font-weight: 400;
@@ -38,6 +41,7 @@
 
     .comic-container {
       margin-bottom: 10px;
+
     } 
       
         
