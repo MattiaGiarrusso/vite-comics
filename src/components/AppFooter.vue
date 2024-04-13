@@ -14,7 +14,7 @@ import AppLinksFooter from './AppLinksFooter.vue';
 <template>
   <section id="footer-link" class="container">
 
-    <nav>
+    <nav class="nav-links">
       <AppLinksFooter></AppLinksFooter>
     </nav>
 
@@ -67,12 +67,9 @@ import AppLinksFooter from './AppLinksFooter.vue';
     display: flex;
     justify-content: space-between;
     padding: 0px 150px;
-
-    >* {
-      width: 50%;
-    }
     
-    .img-container {      
+    .img-container {
+      width: 50%;     
       background-image: url('../assets/img/dc-logo-bg.png');
       background-repeat: no-repeat;
       background-size: cover;
@@ -80,6 +77,7 @@ import AppLinksFooter from './AppLinksFooter.vue';
     }
     
     nav {
+      width: 35%;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
