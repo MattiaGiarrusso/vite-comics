@@ -12,7 +12,6 @@ import AppLinksFooter from './AppLinksFooter.vue';
 
 
 <template>
-
   <section id="footer-link" class="container">
 
     <nav>
@@ -53,11 +52,7 @@ import AppLinksFooter from './AppLinksFooter.vue';
     </div>  
     
   </section>
-
 </template>
-
-
-
 
 
 <style scoped lang="scss">
@@ -90,7 +85,6 @@ import AppLinksFooter from './AppLinksFooter.vue';
       flex-wrap: wrap;
       padding-top: 40px;
     }      
-  
   }
 
   #footer-bottom {

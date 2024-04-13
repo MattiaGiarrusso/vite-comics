@@ -37,7 +37,7 @@ export default {
         <h4 class="uppercase">{{ navSection.title }}</h4>
         <ul class="ms-pdg-bottom-16">
             <li v-for="text in navSection.link">
-                <a href="">{{ text }}</a>
+                <a href="#" :alt="text">{{ text }}</a>
             </li>
         </ul>
 
