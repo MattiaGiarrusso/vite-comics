@@ -5,32 +5,7 @@ import AppLinksFooter from './AppLinksFooter.vue';
     name: 'AppFooter',
     components: {
       AppLinksFooter
-    },
-    data () {
-        return {
-            navSections: [
-                {
-                    title: 'Dc Comics',
-                    link: ['Characters','Comics','Movies','TV','Games','Videos','News',]
-                },
-
-                {
-                    title: 'Shop',
-                    link: ['Shop DC','Shop DC Collectibles',]
-                },
-
-                {
-                    title: 'DC',
-                    link: ['Terms of Use','Privacy policy (New)','Ad Choices','Advertising','Jobs','Subscriptions','Talent Workshops','CPSC Certificates','Ratings','Shop Help','Contact Us',]
-                },
-
-                {
-                    title: 'Sites',
-                    link: ['DC','MAD Magazines','DC Kids','DC Universe','DC Power Visa',]
-                },
-            ]
-        }
-      }
+    },    
   }
 
 </script>
@@ -41,7 +16,7 @@ import AppLinksFooter from './AppLinksFooter.vue';
   <section id="footer-link" class="container">
 
     <nav>
-      <AppLinksFooter v-for="navSection in navSections" :title="navSection.title" :link="navSection.link"></AppLinksFooter>
+      <AppLinksFooter></AppLinksFooter>
     </nav>
 
 
@@ -90,7 +65,7 @@ import AppLinksFooter from './AppLinksFooter.vue';
   @use '../style/partials/variables' as *;
 
   #footer-link {
-    height: 340px;
+    height: 350px;
     background-image: url('../assets/img/footer-bg.jpg');
     background-size: cover;
     color: antiquewhite;
@@ -114,13 +89,6 @@ import AppLinksFooter from './AppLinksFooter.vue';
       flex-direction: column;
       flex-wrap: wrap;
       padding-top: 40px;
-
-      a {
-            font-size: 10px;
-            font-weight: 500;
-            color: lightgray;
-          }
-
     }      
   
   }
