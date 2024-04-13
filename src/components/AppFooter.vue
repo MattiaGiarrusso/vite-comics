@@ -87,16 +87,28 @@ import AppLinksFooter from './AppLinksFooter.vue';
 
   #footer-bottom {
     height: 80px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: $color-primary;
+      font-family: inherit;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $color-primary;
 
         .footer-right {
             color: $color-secondary;
             display: flex;
             align-items: center;
             gap: 16px;
+
+            .social-icon {
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+              
+              img {
+                height: 25px;
+              }
+            }
+
         }
 
         button {
@@ -112,13 +124,6 @@ import AppLinksFooter from './AppLinksFooter.vue';
                 background-color: $color-secondary;
                 transition: 0.2s; 
             }
-        }
-
-        .footer-left {
-
-          &.social-icon {
-            height: 0px;
-          }
         }
   }
 
