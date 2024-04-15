@@ -11,12 +11,7 @@
       AppMainBlue,
       AppFooter,
     },
-    data() {
-      return {
-       
-        }
-      }
-    }
+  }
 </script>
 
 <template>
